@@ -1,0 +1,182 @@
+/* header starts here */
+/* testing*/
+body{
+  background-color: #FFCC99;
+  padding: 0;
+  margin: 0;
+} 
+
+div#header {
+  width: 100%;
+  height: 30vw;
+  text-align: left;
+  vertical-align:text-bottom;
+  padding: 0;
+  margin:0;
+  background-image: url(https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position: left center;
+}
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 200%;
+  text-shadow: 2px 2px 6px white;
+  padding: 0;
+  margin-top: 0;
+  margin-left:10px;
+} 
+/* reserved for js addedd css*/
+
+.makeBig{
+  text-align: center;
+  font-size: 500%; 
+}
+
+.makeWhite{
+  text-shadow: 2px 2px 6px black;
+  color: white;
+}
+
+/*end js css for title*/
+
+#time{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: #5971BC;
+  margin: 20px;
+  text-align: center;
+  list-style-type: none;
+}
+
+#banner-text{
+  font-size: 150%;
+  text-align: center;
+  margin: 20px;
+}
+/* Body of page content starts here */
+
+#gridContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#ingredients{
+  margin: 5px;
+  border-right: double 2px #5971BC;
+  }
+#equipment{
+  margin: 5px; 
+}
+
+#directions{
+  margin: 5px;
+  border-left: double 2px #5971BC;
+}
+/* added from my grid set codepen */
+
+
+#gridContainer #ingredients  ul,
+#gridContainer #ingredients  p,
+#gridContainer #equipment  ul,
+#gridContainer #directions ol,
+#gridContainer #directions p{
+  display: none;
+}
+/*
+ class demo code 
+#gridContainer #ingredients  .show ul,
+#gridContainer #ingredients .show p,
+#gridContainer #equipment  .show ul,
+#gridContainer #directions .show ol,
+#gridContainer #directions .show p{
+  display: block;
+}
+*/
+
+.show{
+  display: block;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 0;
+  font-family: 'Playfair Display', serif;
+  border-bottom: double 2px #5971BC;
+}
+
+h4:hover{
+  color: white;
+} 
+
+li.sub {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  list-style: none;
+}
+
+ul, ol {
+margin-top: 0px;
+}
+
+li{
+  font-family: 'Playfair Display', serif;
+  font-size: 110%;
+}
+
+}
+span.emphasize {
+  font-style: italic;
+  font-weight: bold;
+}
+
+mark{
+  background-color: #FCEC88;
+}
+.copyright {
+  font-family: Arial;
+  font-size: 9px;
+  font-style: italic;
+}
+
+#footer{
+  width: 100vw;
+  height: 5vh;
+  margin-top: 5vh;
+  background-color:#5971BC;
+  color: white;
+  text-align: center;
+}
+
+#footer a{
+  color: #FFCC99;
+}
+#footer p{
+  padding-top: 2vh;
+}
+/* media for mobile turns lists into 1 column (3 rows) removes borders*/
+  @media screen and (orientation: portrait) {
+    #gridContainer{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: none;
+  }
+    #ingredients, #directions{
+      border-right: none;
+      border-left: none;
+    }
+}
+/* media for mobile turns lists into 1 column (3 rows) removes borders, changes header position, and time list orientation*/
+  @media screen and (max-width: 575px) {
+    #time{
+    display: grid;
+    grid-template-columns: none;
+    list-style-type: circle;
+    text-align: left;
+   }
+    h1{
+      text-align: center;
+    }
+  }
