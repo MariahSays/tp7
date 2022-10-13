@@ -1,5 +1,4 @@
 /* header starts here */
-/* testing*/
 body{
   background-color: #FFCC99;
   padding: 0;
@@ -13,10 +12,12 @@ div#header {
   vertical-align:text-bottom;
   padding: 0;
   margin:0;
-  background-image: url(https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-image: none;
   background-size: cover;
   background-position: left center;
 }
+/* image url: url(https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) */
+
 h1 {
   font-family: 'Anton', sans-serif;
   font-size: 200%;
@@ -39,6 +40,12 @@ h1 {
 
 /*end js css for title*/
 
+#header #nav ul{
+  postition: relative;
+  list-style: none;
+  text-align: right;
+  background-color:  #5971BC;
+}
 #time{
   display: grid;
   grid-template-columns: auto auto auto;

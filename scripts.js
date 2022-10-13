@@ -28,32 +28,40 @@ function loadFileInto(fromFile, whereTo) {
 
 window.onload = function(){
   
-document.querySelector("#header h1").classList.add("makeBig"); //changes title on page  ``
+//document.querySelector("#header h1").classList.add("makeBig"); //changes title on page  ``
   
-document.querySelector("#header h1").onclick = function() {
+//document.querySelector("#header h1").onclick = function() {
   this.classList.toggle("makeWhite");
   } // toggles title color on page
 
-document.querySelector("#ingredients h4").onclick = function() {
+//document.querySelector("#ingredients h4").onclick = function() {
    document.querySelector("#ingredients ul").style.display = "block";
  } //displays ingredients 
 
- document.querySelector("#equipment h4").onclick = function() {
+//document.querySelector("#equipment h4").onclick = function() {
    document.querySelector("#equipment ul").style.display = "block";
  } //displays equipment 
  
- document.querySelector("#directions h4").onclick = function() {
+ //document.querySelector("#directions h4").onclick = function() {
    document.querySelector("#directions ol").style.display = "block";
  } //displays directions
  
-loadFileInto("ingredients.html  ", "#ingredients ul");
-loadFileInto("equipment.html", "#equipment ul");
-loadFileInto("directions.html", "#directions ol"); 
+//loadFileInto("ingredients.html  ", "#ingredients ul"); // loads ingredients
+//loadFileInto("equipment.html", "#equipment ul"); // loads equipment
+//loadFileInto("directions.html", "#directions ol"); //load directions
 
-setTimeout(function() {
-document.querySelector("#ingredients ul").innerHTML +="<li>Love!</li>";
-}, 100);
-}
+//setTimeout(function() {
+//document.querySelector("#ingredients ul").innerHTML +="<li>Love!</li>";
+//}, 100);
+ 
+ function Recipes(title,contributor,url, file,file,file){
+   this.recipeTitle = title;
+   this.recipeContributer = contributor;
+   this.imageUrl = url;
+  
+   
+ }
+} 
 
 
 //end of window on load
