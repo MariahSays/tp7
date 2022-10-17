@@ -4,9 +4,26 @@ body{
   padding: 0;
   margin: 0;
 } 
+/*nav bar starts here- copied fro, personal code pen*/ 
+#nav{
+  background-color: #5971BC;
+  text-align: right;
+  width: 100vw;
+  height: 2rem;
+  padding: 0;
+  margin: 0:
+}
+#nav a{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+/*nav bar ends here*/
 
-div#header {
-  width: 100%;
+#header {
+  width: 100vw;
   height: 30vw;
   text-align: left;
   vertical-align:text-bottom;
@@ -18,7 +35,7 @@ div#header {
 }
 /* image url: url(https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) */
 
-h1 {
+#header h1 {
   font-family: 'Anton', sans-serif;
   font-size: 200%;
   text-shadow: 2px 2px 6px white;
@@ -26,6 +43,14 @@ h1 {
   margin-top: 0;
   margin-left:10px;
 } 
+
+#header h3{
+  font-family: 'Anton', sans-serif;
+  text-shadow: 2px 2px 6px white;
+  padding: 0;
+  margin-top: 0;
+  margin-left:10px;
+}
 /* reserved for js addedd css*/
 
 .makeBig{
@@ -40,12 +65,7 @@ h1 {
 
 /*end js css for title*/
 
-#header #nav ul{
-  postition: relative;
-  list-style: none;
-  text-align: right;
-  background-color:  #5971BC;
-}
+
 #time{
   display: grid;
   grid-template-columns: auto auto auto;
