@@ -10,7 +10,7 @@ function loadFileInto(fromFile, whereTo) {
 	// provides code to do something in response to the AJAX request
 	ajax.onreadystatechange = function() {
 			if ((this.readyState == 4) && (this.status == 200)) {
-				document.querySelector(whereTo).innerHTML += this.responseText;
+				document.querySelector(whereTo).innerHTML = this.responseText;
 				
 			} else if ((this.readyState == 4) && (this.status != 200)) {
 				console.log("Error: " + this.responseText);
@@ -22,46 +22,40 @@ function loadFileInto(fromFile, whereTo) {
 	ajax.send();
 
 }
+//recipe object created here
+ function Recipe(recipeTitle, recipeContributor, imageURL, ingredientsURL, equipmentURL, directionsURL){
+     
+   this.title = recipeTitle;
+   this.contributer = recipeContributor;
+   this.imageURL = imageURL;
+   this.ingredients = ingredientsURL;
+   this.equipment = equipmentURL;
+   this.directions = directionsURL;
+  
+ //recipe method
+   this.displayRecipe = function(){
+     
+       document.querySelector("#header h1").innerHTML = this.recipeTitle;
+       document.querySelector("#contributor").innerHTML = this.recipeContributor;
+       document.querySelector("#header").style.backgroundImage = "url("+ this.imageURL +")";
+       loadFileInto(this.ingredients, "#ingredients ul");
+       loadFileInto(this.equipment, "#equipment ul");
+       loadFileInto(this.directions, "#directions ol");
+ }
+}
+//recipe for cashew chicken defined
+  CashewChicken = new Recipe("15 Minute Healthy Cashew Chicken", "Mariah", "https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "ingredients.html", "equipment.html","directions.html");
 
+//end of recipe object
 
 //onload function and contents added form my "interactive recipe codepen https://codepen.io/mariahdawn9/pen/XWqqPMK 
 
 window.onload = function(){
   
-//document.querySelector("#header h1").classList.add("makeBig"); //changes title on page  ``
-  
-//document.querySelector("#header h1").onclick = function() {
-  this.classList.toggle("makeWhite");
-  } // toggles title color on page
-
-//document.querySelector("#ingredients h4").onclick = function() {
-   document.querySelector("#ingredients ul").style.display = "block";
- } //displays ingredients 
-
-//document.querySelector("#equipment h4").onclick = function() {
-   document.querySelector("#equipment ul").style.display = "block";
- } //displays equipment 
- 
- //document.querySelector("#directions h4").onclick = function() {
-   document.querySelector("#directions ol").style.display = "block";
- } //displays directions
- 
-//loadFileInto("ingredients.html  ", "#ingredients ul"); // loads ingredients
-//loadFileInto("equipment.html", "#equipment ul"); // loads equipment
-//loadFileInto("directions.html", "#directions ol"); //load directions
-
-//setTimeout(function() {
-//document.querySelector("#ingredients ul").innerHTML +="<li>Love!</li>";
-//}, 100);
- 
- function Recipes(title,contributor,url, file,file,file){
-   this.recipeTitle = title;
-   this.recipeContributer = contributor;
-   this.imageUrl = url;
-  
-   
- }
-} 
+      document.querySelector("#firstRecipe").onclick = function(){
+        CashewChicken.displayRecipe();
+      }
+  } 
 
 
 //end of window on load

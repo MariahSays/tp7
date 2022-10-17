@@ -102,25 +102,6 @@ body{
 }
 /* added from my grid set codepen */
 
-
-#gridContainer #ingredients  ul,
-#gridContainer #ingredients  p,
-#gridContainer #equipment  ul,
-#gridContainer #directions ol,
-#gridContainer #directions p{
-  display: none;
-}
-/*
- class demo code 
-#gridContainer #ingredients  .show ul,
-#gridContainer #ingredients .show p,
-#gridContainer #equipment  .show ul,
-#gridContainer #directions .show ol,
-#gridContainer #directions .show p{
-  display: block;
-}
-*/
-
 .show{
   display: block;
 }
