@@ -45,7 +45,8 @@ function loadFileInto(fromFile, whereTo) {
 }
 //recipe for cashew chicken defined
   CashewChicken = new Recipe("15 Minute Healthy Cashew Chicken", "Mariah", "https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "ingredients.html", "equipment.html","directions.html");
-
+  MonkeyBreadKabob = new Recipe("Monkey Bread Kabob",);
+  BananaBread = new Recipe ("Banana Bread", "Serena");
 //end of recipe object
 
 //onload function and contents added form my "interactive recipe codepen https://codepen.io/mariahdawn9/pen/XWqqPMK 
