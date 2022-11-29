@@ -35,8 +35,8 @@ function loadFileInto(fromFile, whereTo) {
  //recipe method
    this.displayRecipe = function(){
      
-       document.querySelector("#header h1").innerHTML = this.recipeTitle;
-       document.querySelector("#contributor").innerHTML = this.recipeContributor;
+       document.querySelector("#header h1").innerHTML = this.title;
+       document.querySelector("#contributor").innerHTML = this.contributer;
        document.querySelector("#header").style.backgroundImage = "url("+ this.imageURL +")";
        loadFileInto(this.ingredients, "#ingredients ul");
        loadFileInto(this.equipment, "#equipment ul");
@@ -44,9 +44,9 @@ function loadFileInto(fromFile, whereTo) {
  }
 }
 //recipe for cashew chicken defined
-  CashewChicken = new Recipe("15 Minute Healthy Cashew Chicken", "Mariah", "https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "ingredients.html", "equipment.html","directions.html");
-  MonkeyBreadKabob = new Recipe("Monkey Bread Kabob","Madelyn", "https://cdn.pixabay.com/photo/2013/09/16/16/03/banana-182852_960_720.jpg", "kabobingredients.html", "kabobequipment.html", "kabobdirections.html");
-  BananaBread = new Recipe ("Banana Bread", "Serena", "https://images.unsplash.com/photo-1621994153189-6223b41f7912?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80", "breadingredients.html", "breadequipment.html", "breaddirections.html");
+  CashewChicken = new Recipe( "15 Minute Healthy Cashew Chicken", "Mariah", "https://images.pexels.com/photos/3763792/pexels-photo-3763792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "ingredients.html", "equipment.html","directions.html");
+  MonkeyBreadKabob = new Recipe( "Monkey Bread Kabob","Madelyn", "https://cdn.pixabay.com/photo/2013/09/16/16/03/banana-182852_960_720.jpg", "kabobingredients.html", "kabobequipment.html", "kabobdirections.html");
+  BananaBread = new Recipe ( "Banana Bread ", "Serena", "https://images.unsplash.com/photo-1621994153189-6223b41f7912?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80", "breadingredients.html", "breadequipment.html", "breaddirections.html");
 //end of recipe object
 
 //onload function and contents added form my "interactive recipe codepen https://codepen.io/mariahdawn9/pen/XWqqPMK 
